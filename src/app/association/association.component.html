@@ -1,0 +1,10 @@
+
+<div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+  </div>
+  <input type="text" class="form-control" appAssociation="search" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of resource">{{item.name}}</li>
+</ul>
