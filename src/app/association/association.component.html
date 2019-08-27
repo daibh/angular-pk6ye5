@@ -1,0 +1,17 @@
+<div class="col md-12">
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+    </div>
+    <!-- <input type="text" class="form-control" [appAssociation]="search" (searchChange)="onSearchChange($event)"
+      aria-label="Small" aria-describedby="inputGroup-sizing-sm"> -->
+    <!-- <input type="text" class="form-control" [autocomplete]="search" (searchChange)="onSearchChange($event)"
+      aria-label="Small" aria-describedby="inputGroup-sizing-sm"> -->
+    <input type="text" class="form-control" [typeahead]="search" (searchChange)="onSearchChange($event)"
+      aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+  </div>
+  <p class="text-capitalize text-info text-monospace">{{message}}</p>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of resultSearch">{{item.name}}</li>
+  </ul>
+</div>
